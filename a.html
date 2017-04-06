@@ -1,0 +1,55 @@
+<meta charset="utf-8">
+<input type="text" id="userInput" value="0"></input>
+?
+<input type="text" id="userInput2" value="0"></input>
+<button onclick="plus()">+</button>
+<button onclick="minus()">-</button>
+<button onclick="multiple()">*</button>
+<button onclick="divide()">/</button>
+<button onclick="Myclear()">C</button>
+<!-- add this line for function to write into -->
+<output id="demo"></output><br>   
+<p>----------------------------------------------------</p>
+<input type="text" id="userInput3" value="0"></input>
+<button onclick="MyGrade()">Grade!</button>
+<output id="demo2"></output><br>
+<script type="text/javascript">
+function plus(){
+    var userInput = parseFloat(document.getElementById("userInput").value);
+    var userInput2 = parseFloat(document.getElementById("userInput2").value);
+    document.getElementById("demo").value = userInput + userInput2;
+}
+
+function minus(){
+    var userInput = parseFloat(document.getElementById("userInput").value);
+    var userInput2 = parseFloat(document.getElementById("userInput2").value);
+    document.getElementById("demo").value = userInput - userInput2;
+}
+
+function multiple(){
+    var userInput = parseFloat(document.getElementById("userInput").value);
+    var userInput2 = parseFloat(document.getElementById("userInput2").value);
+    document.getElementById("demo").value = userInput * userInput2;
+}
+
+function divide(){
+    var userInput = parseFloat(document.getElementById("userInput").value);
+    var userInput2 = parseFloat(document.getElementById("userInput2").value);
+    document.getElementById("demo").value = userInput / userInput2;
+}
+
+function Myclear() {
+    document.getElementById("userInput").value = 0;
+    document.getElementById("userInput2").value = 0;
+    document.getElementById("demo").value = "";
+}
+
+function MyGrade() {
+    var userInput3 = parseFloat(document.getElementById("userInput3").value);
+    if (userInput3 >= 60){
+        document.getElementById("demo2").value = "及格";
+    } else {
+        document.getElementById("demo2").value = "不及格";
+    }
+}
+</script>
